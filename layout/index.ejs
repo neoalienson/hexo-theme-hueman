@@ -1,1 +1,28 @@
-<%- partial('common/archive') %>
+
+<article id="<%= page.layout %>-<%= page.slug %>" class="article article-single article-type-<%= page.layout %><%= (page.direction && page.direction.toLowerCase() === 'rtl' ? ' rtl' : '') %>" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        <div class="article-entry" itemprop="articleBody">
+            <%- page.content %>
+        </div>
+    </div>
+    <%- partial('common/post/ld_json', { post: page }) %>
+</article>
+
+<% var last, postCount = 0; %>
+<% var posts = site.posts.sort('date', -1).slice(0, 10) %>
+<% posts.each(function(post, i) { %>
+    <% postCount++; %>
+    <% if (postCount % 2 == 1) { %>
+        <div class="article-row">
+    <% } %>
+        <%- partial('common/summary', { post: post }) %>
+    <% if (postCount == posts.length || postCount % 2 == 0) { %>
+        </div>
+    <% } %>
+<% }) %>
+<% if (page.total > 1) { %>
+    <nav id="page-nav">
+        <span class="pages"><%= _p('nav.current_page', page.current) %><%= _p('nav.total_page', page.total) %></span>
+        <%- paginator({prev_text: '&laquo;', next_text: '&raquo;', escape: false}) %>
+    </nav>
+<% } %>
