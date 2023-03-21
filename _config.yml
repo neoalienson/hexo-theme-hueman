@@ -25,15 +25,12 @@ customize:
     social_links: # for more icons, please see http://fontawesome.io/icons/#brand
 #        twitter: /
 #        facebook: /
-#        google-plus: /
         stack-exchange: https://stackexchange.com/users/2122053/neo?tab=accounts
         stack-overflow: https://stackoverflow.com/users/1885105/neo
         bitbucket: https://bitbucket.org/neoalienson/
         github: https://github.com/neoalienson
         linkedin: linkedin.com/in/disconnectedout
-        paypal: https://www.paypal.me/neoalienson
 #        weibo: /
-#        rss: /
 
 # Widgets
 widgets:
