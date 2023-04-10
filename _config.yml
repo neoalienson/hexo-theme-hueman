@@ -51,6 +51,7 @@ search:
 # Comment
 comment:
     disqus: # enter disqus shortname here
+        placeholder: Just Do It # enter the comment box placeholder
     duoshuo: # enter duoshuo shortname here
     youyan: # enter youyan uid here
     facebook: # enter true to enable
