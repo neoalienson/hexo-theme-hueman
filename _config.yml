@@ -50,7 +50,7 @@ search:
 
 # Comment
 comment:
-    disqus: neoworks # enter disqus shortname here
+    disqus: # enter disqus shortname here
     duoshuo: # enter duoshuo shortname here
     youyan: # enter youyan uid here
     facebook: # enter true to enable
